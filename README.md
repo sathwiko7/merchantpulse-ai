@@ -1,50 +1,101 @@
 # MerchantPulse AI
 
-## AI-Powered Payment Intelligence & Revenue Recovery Platform
+### AI-Powered Payment Intelligence & Revenue Recovery Platform
 
-MerchantPulse AI helps merchants understand failed payments, identify recovery opportunities, and prioritize actions that can potentially recover lost revenue.
+<p align="center">
+  <strong>Turn failed payments into actionable revenue recovery opportunities.</strong>
+</p>
 
-## What Problem Does It Solve?
+<p align="center">
+  <a href="YOUR_VERCEL_URL">🚀 Live Demo</a>
+  •
+  <a href="https://github.com/sathwiko7/merchantpulse-ai">💻 GitHub</a>
+</p>
 
-Failed payments can represent lost revenue for businesses. MerchantPulse AI helps merchants identify:
+---
 
-- Which failed payments should be prioritized
-- Recovery probability
-- Estimated recoverable revenue
-- Recommended recovery actions
-- Payment patterns across methods, locations, and categories
+## 🧠 Overview
 
-## Key Features
+MerchantPulse AI is a payment intelligence platform designed to help merchants understand **why payments fail, which failures matter most, and what action should be taken next**.
 
-### Payment Analytics
-- Total transactions
-- Successful payments
-- Failed payments
-- Revenue at risk
-- Transaction history
-- Payment method and customer information
+Instead of treating a failed payment as the end of a transaction, MerchantPulse analyzes transaction behaviour and converts payment failures into **prioritized recovery opportunities**.
 
-### Recovery Intelligence
-- Recovery eligibility
-- Recovery probability
-- Recovery priority
-- Estimated recovery
-- Recommended actions
+The platform combines:
 
-### Recovery Workflow
-Merchants can initiate recovery actions directly from the recovery dashboard and track initiated recovery opportunities.
+- Payment analytics
+- Failure-pattern detection
+- Merchant insights
+- Recovery probability scoring
+- Revenue exposure analysis
+- Recovery prioritization
+- Explainable recommendations
 
-## Architecture
+The goal is simple:
+
+> **Detect → Understand → Prioritize → Recover**
+
+---
+
+# 🎯 Problem
+
+Failed payments directly represent potential lost revenue.
+
+For a merchant, knowing that a payment failed is not enough.
+
+The important questions are:
+
+- Which failed payments should I investigate first?
+- How much revenue is at risk?
+- Which payments have the highest recovery potential?
+- Are certain payment methods failing more frequently?
+- Are failures concentrated during specific time windows?
+- What recovery action should be attempted?
+
+MerchantPulse AI transforms these questions into a decision-support workflow.
+
+---
+
+# 💡 Solution
+
+MerchantPulse processes transaction data through a multi-stage intelligence pipeline.
 
 ```text
 Transaction Data
-       ↓
-Analytics Engine
-       ↓
-Insight Engine
-       ↓
-Recovery Engine
-       ↓
-Recovery Opportunities
-       ↓
-Prioritize & Take Action
+       │
+       ▼
+┌─────────────────────┐
+│   Analytics Engine  │
+│                     │
+│ Failure rates       │
+│ Revenue exposure    │
+│ Payment patterns    │
+│ Time patterns       │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│   Insight Engine    │
+│                     │
+│ Risk detection      │
+│ Pattern analysis    │
+│ Anomaly signals     │
+│ Merchant insights   │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│   Recovery Engine   │
+│                     │
+│ Probability score   │
+│ Priority            │
+│ Revenue estimate    │
+│ Recommended action  │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Merchant Dashboard  │
+│                     │
+│ Detect → Prioritize │
+│ → Take Action       │
+└─────────────────────┘
