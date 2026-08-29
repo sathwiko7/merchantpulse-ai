@@ -35,7 +35,7 @@ function App() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/analytics"
+        "https://merchantpulse-ai.onrender.com/api/analytics"
       );
 
       if (!response.ok) {
@@ -71,7 +71,7 @@ function App() {
   const fetchRecovery = async () => {
   try {
     const response = await fetch(
-      "http://localhost:5000/api/recovery"
+      "https://merchantpulse-ai.onrender.com/api/recovery"
     );
 
     if (!response.ok) {

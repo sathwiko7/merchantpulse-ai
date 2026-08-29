@@ -60,7 +60,7 @@ function Recovery() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/recovery"
+        "https://merchantpulse-ai.onrender.com/api/recovery"
       );
 
       if (!response.ok) {

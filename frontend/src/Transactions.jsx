@@ -24,7 +24,7 @@ function Transactions() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/transactions"
+        "https://merchantpulse-ai.onrender.com/api/transactions"
       );
 
       if (!response.ok) {
@@ -161,7 +161,7 @@ function Transactions() {
       setRecoveryLoading(true);
 
      const response = await fetch(
-  `http://localhost:5000/api/transactions/${transaction.id}`
+  `https://merchantpulse-ai.onrender.com/api/transactions/${transaction.id}`
 );
       if (!response.ok) {
         throw new Error(

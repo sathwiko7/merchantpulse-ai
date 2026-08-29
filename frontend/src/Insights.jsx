@@ -44,7 +44,7 @@ function Insights() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/analytics"
+        "https://merchantpulse-ai.onrender.com/api/analytics"
       );
 
       if (!response.ok) {
