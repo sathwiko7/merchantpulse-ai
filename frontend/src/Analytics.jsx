@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Analytics() {
   const [analytics, setAnalytics] = useState(null);
@@ -262,58 +262,25 @@ function Analytics() {
 
   const graphTimeEntries = timeEntries.slice(0, 12);
 
-  const linePoints = useMemo(() => {
-    if (!graphTimeEntries.length) return "";
+  const linePoints = (() => {
+  if (!graphTimeEntries.length) return "";
 
-    const width = 760;
-    const height = 260;
-    const paddingX = 55;
-    const paddingY = 30;
+  const width = 760;
+  const height = 260;
+  const paddingX = 55;
+  const paddingY = 30;
 
-    const values = graphTimeEntries.map((item) =>
-      Number(item.rate || 0)
-    );
+  const values = graphTimeEntries.map((item) =>
+    Number(item.rate || 0)
+  );
 
-    const maxValue = Math.max(...values, 10);
+  const maxValue = Math.max(...values, 10);
 
-    return values
-      .map((value, index) => {
-        const x =
-          paddingX +
-          (index *
-            (width - paddingX * 2)) /
-            Math.max(values.length - 1, 1);
-
-        const y =
-          height -
-          paddingY -
-          (value / maxValue) *
-            (height - paddingY * 2);
-
-        return `${x},${y}`;
-      })
-      .join(" ");
-  }, [graphTimeEntries]);
-
-  const lineDots = useMemo(() => {
-    if (!graphTimeEntries.length) return [];
-
-    const width = 760;
-    const height = 260;
-    const paddingX = 55;
-    const paddingY = 30;
-
-    const values = graphTimeEntries.map((item) =>
-      Number(item.rate || 0)
-    );
-
-    const maxValue = Math.max(...values, 10);
-
-    return values.map((value, index) => {
+  return values
+    .map((value, index) => {
       const x =
         paddingX +
-        (index *
-          (width - paddingX * 2)) /
+        (index * (width - paddingX * 2)) /
           Math.max(values.length - 1, 1);
 
       const y =
@@ -322,14 +289,45 @@ function Analytics() {
         (value / maxValue) *
           (height - paddingY * 2);
 
-      return {
-        x,
-        y,
-        value,
-        label: graphTimeEntries[index].name,
-      };
-    });
-  }, [graphTimeEntries]);
+      return `${x},${y}`;
+    })
+    .join(" ");
+})();
+
+const lineDots = (() => {
+  if (!graphTimeEntries.length) return [];
+
+  const width = 760;
+  const height = 260;
+  const paddingX = 55;
+  const paddingY = 30;
+
+  const values = graphTimeEntries.map((item) =>
+    Number(item.rate || 0)
+  );
+
+  const maxValue = Math.max(...values, 10);
+
+  return values.map((value, index) => {
+    const x =
+      paddingX +
+      (index * (width - paddingX * 2)) /
+        Math.max(values.length - 1, 1);
+
+    const y =
+      height -
+      paddingY -
+      (value / maxValue) *
+        (height - paddingY * 2);
+
+    return {
+      x,
+      y,
+      value,
+      label: graphTimeEntries[index].name,
+    };
+  });
+})();
 
   /* =========================================================
      DONUT GRAPH
