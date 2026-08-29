@@ -167,3 +167,26 @@ Analytics Engine
 - Vercel — Frontend
 - Render — Backend
 - GitHub — Source Control
+
+
+---
+
+## 📸 Application Screenshots
+
+### 🏠 Overview Dashboard
+
+![MerchantPulse Overview](screenshots/overview.png)
+
+### 📊 Payment Analytics
+
+![MerchantPulse Analytics](screenshots/analytics.png)
+
+### 💰 Revenue Recovery
+
+![MerchantPulse Revenue Recovery](screenshots/revenue-recover.png)
+
+### 💳 Transaction Intelligence
+
+![MerchantPulse Transactions](screenshots/transactions.png)
+
+---
