@@ -7,3 +7,15 @@ build/
 .vite/
 __pycache__/
 *.log
+
+
+---
+
+## 🔌 API
+
+MerchantPulse AI exposes a lightweight REST API for analytics, merchant insights, transaction intelligence, and revenue recovery.
+
+### Base URL
+
+```text
+https://merchantpulse-ai.onrender.com
