@@ -2,100 +2,168 @@
 
 ### AI-Powered Payment Intelligence & Revenue Recovery Platform
 
-<p align="center">
-  <strong>Turn failed payments into actionable revenue recovery opportunities.</strong>
-</p>
+MerchantPulse AI is a payment intelligence platform designed to help merchants understand payment failures, identify revenue at risk, and prioritize the failed transactions with the highest recovery potential.
 
-<p align="center">
-  <a href="YOUR_VERCEL_URL">🚀 Live Demo</a>
-  •
-  <a href="https://github.com/sathwiko7/merchantpulse-ai">💻 GitHub</a>
-</p>
+The platform transforms raw transaction data into actionable insights through analytics, payment failure analysis, recovery scoring, and prioritized recovery opportunities.
 
 ---
 
-## 🧠 Overview
+## 🚀 Live Demo
 
-MerchantPulse AI is a payment intelligence platform designed to help merchants understand **why payments fail, which failures matter most, and what action should be taken next**.
+🌐 **Application:**  
+https://merchantpulse-ai-flame.vercel.app
 
-Instead of treating a failed payment as the end of a transaction, MerchantPulse analyzes transaction behaviour and converts payment failures into **prioritized recovery opportunities**.
-
-The platform combines:
-
-- Payment analytics
-- Failure-pattern detection
-- Merchant insights
-- Recovery probability scoring
-- Revenue exposure analysis
-- Recovery prioritization
-- Explainable recommendations
-
-The goal is simple:
-
-> **Detect → Understand → Prioritize → Recover**
+🔗 **GitHub:**  
+https://github.com/sathwiko7/merchantpulse-ai
 
 ---
 
-# 🎯 Problem
+## 🎯 What Problem Does It Solve?
 
-Failed payments directly represent potential lost revenue.
+Failed payments can represent significant lost revenue for businesses.
 
-For a merchant, knowing that a payment failed is not enough.
+MerchantPulse AI helps merchants answer:
 
-The important questions are:
-
-- Which failed payments should I investigate first?
-- How much revenue is at risk?
-- Which payments have the highest recovery potential?
-- Are certain payment methods failing more frequently?
-- Are failures concentrated during specific time windows?
-- What recovery action should be attempted?
-
-MerchantPulse AI transforms these questions into a decision-support workflow.
+- Which payments are failing?
+- How much revenue is currently at risk?
+- Which payment methods have the highest failure rates?
+- Which failed payments have the highest recovery potential?
+- Which recovery opportunities should be addressed first?
+- What actions can merchants take to recover lost revenue?
 
 ---
 
-# 💡 Solution
+## ✨ Key Features
 
-MerchantPulse processes transaction data through a multi-stage intelligence pipeline.
+### 📊 Payment Analytics
+
+Provides an overview of payment performance including:
+
+- Total transactions
+- Successful payments
+- Failed payments
+- Failure rate
+- Revenue at risk
+- Failure trends over time
+- Payment method performance
+
+### 🧠 Merchant Intelligence
+
+The intelligence layer analyzes transaction data and generates actionable insights such as:
+
+- Revenue at risk detection
+- Payment method failure analysis
+- High-risk payment patterns
+- Recovery opportunities
+- Recommended priorities
+
+### 💰 Revenue Recovery
+
+Identifies failed transactions that may be worth recovering.
+
+Each recovery opportunity includes:
+
+- Transaction ID
+- Customer
+- Transaction amount
+- Recovery probability
+- Recovery priority
+- Estimated recovery amount
+- Payment method
+- Location
+- Category
+
+### 💳 Transaction Intelligence
+
+Merchants can explore transaction history and filter transactions by:
+
+- Status
+- Payment method
+- Customer
+- City
+- Transaction details
+
+---
+
+# 🏗️ Architecture
+
+```mermaid
+flowchart TD
+
+    A[💳 Transaction Data] --> B[⚙️ Analytics Engine]
+
+    B --> C[📊 Payment Analytics]
+
+    B --> D[🧠 Insight Engine]
+
+    B --> E[💰 Recovery Engine]
+
+    C --> F[📈 Analytics Dashboard]
+
+    D --> G[💡 Merchant Insights]
+
+    E --> H[🎯 Recovery Opportunities]
+
+    H --> I[⚡ Prioritize & Take Action]
+
+    F --> J[🖥️ React Frontend]
+    G --> J
+    I --> J
+
+    J --> K[🌐 Vercel]
+
+    J --> L[🔌 REST API]
+
+    L --> M[🖥️ Node.js Backend]
+
+    M --> B
+```
+
+### Architecture Flow
 
 ```text
 Transaction Data
        │
        ▼
-┌─────────────────────┐
-│   Analytics Engine  │
-│                     │
-│ Failure rates       │
-│ Revenue exposure    │
-│ Payment patterns    │
-│ Time patterns       │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│   Insight Engine    │
-│                     │
-│ Risk detection      │
-│ Pattern analysis    │
-│ Anomaly signals     │
-│ Merchant insights   │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│   Recovery Engine   │
-│                     │
-│ Probability score   │
-│ Priority            │
-│ Revenue estimate    │
-│ Recommended action  │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│ Merchant Dashboard  │
-│                     │
-│ Detect → Prioritize │
-│ → Take Action       │
-└─────────────────────┘
+Analytics Engine
+       │
+       ├──────────────► Payment Analytics
+       │                       │
+       │                       ▼
+       │                Analytics Dashboard
+       │
+       ├──────────────► Insight Engine
+       │                       │
+       │                       ▼
+       │                 Merchant Insights
+       │
+       └──────────────► Recovery Engine
+                               │
+                               ▼
+                     Recovery Opportunities
+                               │
+                               ▼
+                       Prioritize & Act
+```
+
+
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- Vite
+- JavaScript
+- CSS
+
+### Backend
+
+- Node.js
+- REST API
+
+### Deployment
+
+- Vercel — Frontend
+- Render — Backend
+- GitHub — Source Control
