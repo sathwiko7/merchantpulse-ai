@@ -190,3 +190,66 @@ Analytics Engine
 ![MerchantPulse Transactions](screenshots/transactions.png)
 
 ---
+
+## 🧠 Intelligence & Recovery Scoring
+
+MerchantPulse uses an explainable decision engine to transform transaction analytics into actionable merchant intelligence.
+
+### Recovery Scoring
+
+Each failed transaction is evaluated using multiple observable signals:
+
+- Transaction value
+- Payment-method failure behaviour
+- Time-window failure behaviour
+- Overall merchant failure rate
+- Detected payment anomalies
+
+A failed transaction starts with a baseline recovery probability and receives additional score adjustments based on these factors.
+
+The final recovery probability is constrained to a safe range and used to determine the recovery priority.
+
+### Recovery Priority
+
+Recovery opportunities are classified into:
+
+- 🔴 HIGH — high-value or high-probability recovery opportunities
+- 🟡 MEDIUM — moderate recovery opportunities
+- 🟢 LOW — lower-value and lower-probability opportunities
+
+### Estimated Recovery
+
+Estimated recovery is calculated using:
+
+`Estimated Recovery = Transaction Amount × Recovery Probability`
+
+### Explainable Insights
+
+The MerchantPulse Intelligence Engine analyzes:
+
+- Revenue at risk
+- Payment-method failure patterns
+- Time-based failure patterns
+- Overall failure rate
+- Payment anomalies
+
+Each generated insight contains:
+
+- Severity
+- Confidence
+- Evidence
+- Recommendation
+- Recommended action
+
+This makes every recommendation traceable to observed transaction behaviour rather than producing unexplained predictions.
+
+### Recommended Actions
+
+The system can recommend payment-specific recovery actions such as:
+
+- Retry UPI payment
+- Retry card payment
+- Retry wallet payment
+- Retry payment or suggest an alternative payment method
+
+For high-priority NetBanking failures, the system can recommend trying another payment method such as UPI or card.
