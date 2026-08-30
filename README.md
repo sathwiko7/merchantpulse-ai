@@ -296,3 +296,35 @@ merchantpulse-ai/
 │
 ├── README.md
 └── .gitignore
+
+
+---
+
+## ⚙️ How It Works
+
+1. **Transaction data is loaded** from the transaction dataset.
+2. **Analytics Engine** calculates payment metrics such as success rate, failure rate, and revenue at risk.
+3. **Insight Engine** analyzes payment patterns and generates explainable merchant insights.
+4. **Recovery Engine** evaluates failed transactions and assigns recovery probability and priority.
+5. The **React frontend** displays analytics, insights, transactions, and recovery opportunities through an interactive dashboard.
+6. The frontend communicates with the **Node.js REST API** to retrieve the processed data.
+
+---
+
+## 🚀 Deployment
+
+The application is deployed as a full-stack system:
+
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Source Code:** GitHub
+
+### Live Application
+
+https://merchantpulse-ai-flame.vercel.app
+
+### Backend API
+
+https://merchantpulse-ai.onrender.com
+
+---
