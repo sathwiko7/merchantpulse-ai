@@ -302,29 +302,63 @@ merchantpulse-ai/
 
 ## ⚙️ How It Works
 
-1. **Transaction data is loaded** from the transaction dataset.
-2. **Analytics Engine** calculates payment metrics such as success rate, failure rate, and revenue at risk.
-3. **Insight Engine** analyzes payment patterns and generates explainable merchant insights.
-4. **Recovery Engine** evaluates failed transactions and assigns recovery probability and priority.
-5. The **React frontend** displays analytics, insights, transactions, and recovery opportunities through an interactive dashboard.
-6. The frontend communicates with the **Node.js REST API** to retrieve the processed data.
+MerchantPulse AI processes transaction data through three intelligence engines:
+
+1. **Transaction Data** — Raw payment transactions are loaded from the dataset.
+2. **Analytics Engine** — Calculates payment metrics, failure rates, trends, and revenue at risk.
+3. **Insight Engine** — Identifies payment patterns and generates explainable merchant insights.
+4. **Recovery Engine** — Scores failed transactions based on recovery potential and priority.
+5. **React Dashboard** — Presents analytics, insights, transactions, and recovery opportunities to the merchant.
 
 ---
 
 ## 🚀 Deployment
 
-The application is deployed as a full-stack system:
-
-- **Frontend:** Vercel
-- **Backend:** Render
-- **Source Code:** GitHub
+| Component | Platform |
+|---|---|
+| Frontend | Vercel |
+| Backend | Render |
+| Source Code | GitHub |
 
 ### Live Application
 
-https://merchantpulse-ai-flame.vercel.app
+[MerchantPulse AI](https://merchantpulse-ai-flame.vercel.app)
 
 ### Backend API
 
-https://merchantpulse-ai.onrender.com
+[MerchantPulse API](https://merchantpulse-ai.onrender.com)
 
 ---
+
+## 📁 Project Structure
+
+```text
+merchantpulse-ai/
+├── backend/
+│   ├── data/
+│   │   ├── generateData.js
+│   │   └── transactions.json
+│   ├── services/
+│   │   ├── analyticsEngine.js
+│   │   ├── insightEngine.js
+│   │   └── recoveryEngine.js
+│   ├── api.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── Analytics.jsx
+│   │   ├── Insights.jsx
+│   │   ├── Recovery.jsx
+│   │   ├── Transactions.jsx
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+│
+├── screenshots/
+│   ├── analytics.png
+│   ├── overview.png
+│   ├── revenue-recover.png
+│   └── transactions.png
+│
+└── README.md
