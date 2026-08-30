@@ -253,3 +253,46 @@ The system can recommend payment-specific recovery actions such as:
 - Retry payment or suggest an alternative payment method
 
 For high-priority NetBanking failures, the system can recommend trying another payment method such as UPI or card.
+
+
+---
+
+## 📁 Project Structure
+
+```text
+merchantpulse-ai/
+│
+├── backend/
+│   ├── data/
+│   │   ├── generateData.js
+│   │   └── transactions.json
+│   │
+│   ├── services/
+│   │   ├── analyticsEngine.js
+│   │   ├── insightEngine.js
+│   │   └── recoveryEngine.js
+│   │
+│   ├── api.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── Analytics.jsx
+│   │   ├── Insights.jsx
+│   │   ├── Recovery.jsx
+│   │   ├── Transactions.jsx
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   └── main.jsx
+│   │
+│   ├── public/
+│   └── package.json
+│
+├── screenshots/
+│   ├── analytics.png
+│   ├── overview.png
+│   ├── revenue-recover.png
+│   └── transactions.png
+│
+├── README.md
+└── .gitignore
